@@ -1,3 +1,4 @@
+
 "use client";
 
 import {useEffect, useRef, useState} from 'react';
@@ -8,7 +9,7 @@ import {generateTypingParagraph} from '@/ai/flows/generate-typing-paragraph';
 import {useToast} from '@/hooks/use-toast';
 import {Input} from '@/components/ui/input';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
-
+import {Textarea} from '@/components/ui/textarea';
 interface TypingTestProps {}
 
 const TypingTest: React.FC<TypingTestProps> = () => {
@@ -104,17 +105,17 @@ const TypingTest: React.FC<TypingTestProps> = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="flex items-center justify-between">
-          <Select value={difficulty} onValueChange={handleDifficultyChange}>
+          <Select value={difficulty} onValueChange={handleDifficultyChange} className="select">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Select difficulty" />
             </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="easy">Easy</SelectItem>
-              <SelectItem value="medium">Medium</SelectItem>
-              <SelectItem value="hard">Hard</SelectItem>
+            <SelectContent className="select">
+              <SelectItem value="easy" className="select">Easy</SelectItem>
+              <SelectItem value="medium" className="select">Medium</SelectItem>
+              <SelectItem value="hard" className="select">Hard</SelectItem>
             </SelectContent>
           </Select>
-          <Button onClick={() => generateNewParagraph(difficulty)} variant="outline">
+          <Button onClick={() => generateNewParagraph(difficulty)} variant="outline" className="button">
             New Text
           </Button>
         </div>
@@ -127,24 +128,25 @@ const TypingTest: React.FC<TypingTestProps> = () => {
             let charStyle = {};
             if (incorrectIndices.includes(index) && typedText[index] !== undefined) {
               charStyle = {color: 'hsl(var(--incorrect-input))'};
-            } else if (typedText[index] !== undefined) {
-              charStyle = {color: 'hsl(var(--correct-input))'};
+            } else {
+              if (typedText[index] !== undefined) {
+                charStyle = {color: 'hsl(var(--correct-input))'};
+              }
             }
             return (
-              <span key={index} style={charStyle}>
+              <span key={index} style={charStyle} className={incorrectIndices.includes(index) && typedText[index] !== undefined ? 'incorrect' : typedText[index] !== undefined ? 'correct' : ''}>
                 {char}
               </span>
             );
           })}
         </div>
 
-        <Input
+        <Textarea
           ref={inputRef}
-          type="text"
           placeholder="Start typing here..."
           value={typedText}
           onChange={handleTextChange}
-          className="rounded-md px-4 py-2 text-lg"
+          className="rounded-md px-4 py-2 text-lg textarea"
           autoFocus
         />
 
