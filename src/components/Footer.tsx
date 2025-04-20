@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="w-full py-6 bg-gradient-to-b from-black to-red-900 text-white flex items-center justify-center gap-4 rounded-md mt-4 p-4">
       <Button variant="ghost" className="text-white" asChild>
         <a
-          href="https://twitter.com/shadcn"
+          href="https://twitter.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -17,7 +17,7 @@ const Footer = () => {
       </Button>
       <Button variant="ghost" className="text-white" asChild>
         <a
-          href="https://linkedin.com/in/shadcn"
+          href="https://www.linkedin.com/in/avinash-verma-20946b21b/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,7 +26,7 @@ const Footer = () => {
       </Button>
       <Button variant="ghost" className="text-white" asChild>
         <a
-          href="https://github.com/shadcn/ui"
+          href="https://github.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -35,7 +35,7 @@ const Footer = () => {
       </Button>
       <Button variant="ghost" className="text-white" asChild>
         <a
-          href="https://instagram.com/shadcn"
+          href="https://www.instagram.com/avinash_vermaa"
           target="_blank"
           rel="noopener noreferrer"
         >
