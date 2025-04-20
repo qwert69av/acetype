@@ -8,7 +8,7 @@ body {
 
 @layer base {
   :root {
-    --background: linear-gradient(to bottom, #1e1e1e, #4a000b);
+    --background: #121212; /* Dark background to replace gradient */
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -45,7 +45,7 @@ body {
     --incorrect-input: 0 76% 55%;
   }
   .dark {
-    --background: linear-gradient(to bottom, #1e1e1e, #4a000b);
+    --background: #121212; /* Dark background to replace gradient */
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
     --card-foreground: 0 0% 98%;
