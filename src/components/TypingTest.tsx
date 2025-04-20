@@ -98,7 +98,7 @@ const TypingTest: React.FC<TypingTestProps> = () => {
   return (
     <Card className="w-[90%] max-w-3xl rounded-lg shadow-md p-4 md:p-6 space-y-4">
       <CardHeader>
-        <CardTitle className="text-2xl font-semibold text-center">Type Ace</CardTitle>
+        <CardTitle className="text-2xl font-semibold text-center">AceType </CardTitle>
         <CardDescription className="text-center">
           Improve your typing speed and accuracy with our typing test!
         </CardDescription>
