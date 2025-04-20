@@ -1,7 +1,7 @@
 'use client';
 
 import {Button} from '@/components/ui/button';
-import {Github, Linkedin, Twitter} from 'lucide-react';
+import {Github, Instagram, Linkedin, Twitter} from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -31,6 +31,15 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <Github className="h-5 w-5" />
+        </a>
+      </Button>
+      <Button variant="ghost" className="text-white" asChild>
+        <a
+          href="https://instagram.com/shadcn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram className="h-5 w-5" />
         </a>
       </Button>
     </footer>
