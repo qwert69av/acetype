@@ -120,7 +120,7 @@ const TypingTest: React.FC<TypingTestProps> = () => {
         </div>
 
         <div
-          className="font-sans text-lg leading-relaxed break-words"
+          className="font-sans text-lg leading-relaxed break-words rounded-md px-4 py-2"
           style={{whiteSpace: 'pre-wrap'}}
         >
           {paragraph.split('').map((char, index) => {
